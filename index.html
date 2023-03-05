@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="br-PT">
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulário de registro</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Formulário de registro</h1>
+    <p>Por favor, preencha este formulário com as informações necessárias</p>
+    <form method="post" action='https://www.gameiftech.com.br/'>
+      <fieldset>
+        <label for="nome">Nome: <input id="nome" name="nome" type="text" required /></label>
+        <label for="lsobrenome">Sobrenome: <input id="sobrenome" name="sobrenome" type="text" required /></label>
+        <label for="email">E-mail: <input id="email" name="email" type="email" required /></label>
+        <label for="password">Senha: <input id="password" name="password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+      </fieldset>
+      <fieldset>
+        <label for="conta pessoal"><input id="conta pessoal" type="radio" name="account-type" class="inline" /> Conta pessoal</label>
+        <label for="conta de profissional"><input id="conta de profissional" type="radio" name="account-type" class="inline" /> Conta de profissional</label>
+        <label for="termos e condicoes">
+          <input id="termos e condicoes" type="checkbox" required name="termos e condições" class="inline" /> Eu aceito o <a href="https://www.gameiftech.com.br/p/politica-de-privacidade_18.html">termos e Condições</a>
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="foto-perfil">Carregue uma foto de perfil: <input id="foto-perfil" type="file" name="file" /></label>
+        <label for="idade">Informe sua idade (anos): <input id="idade" type="number" name="idade" min="13" max="120" /></label>
+        <label for="referencia">Como você ficou sabendo sobre nós?
+          <select id="referencia" name="referencia">
+            <option value="">Site</option>
+            <option value="1">Facebook</option>
+            <option value="2">Canal do YouTube</option>
+            <option value="3">Blog</option>
+            <option value="4">outros</option>
+          </select>
+        </label>
+        <label for="bio">Biografia:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Eu gosto de programar na praia.."></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
